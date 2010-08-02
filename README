@@ -1,0 +1,34 @@
+YAWPP
+========
+
+YAWPP is Yet Another Wordpress Podcasting Plugin. While having a super-
+simple and minimalistic aproach, it is still able to cover most 
+requirements of the average podcaster.
+
+YAWPP might require heavy tweaking to fit your requirements, as it was
+developed in a quick and dirty way.
+
+Localization 
+------
+The configuration backend is currently in German. 
+
+YAWPP_Podcasts class
+------
+You may use this class to get podcast episodes that are managed by 
+YAWPP. This could i.e. be handy for developing a widget that displays
+the latest podcast episodes.
+
+License
+------
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
