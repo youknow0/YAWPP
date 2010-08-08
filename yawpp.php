@@ -1,10 +1,11 @@
 <?php
 /*
 Plugin Name: YAWPP
-Plugin URI: http://github.com/feuerfuchs/YAWPP
+Plugin URI: http://yawpp.endegelaen.de
 Description: Yet Another Wordpress Podcasting Plugin
-Author: feuerfuchs
-Version: 0.1
+Author: Nico Böhr
+Version: 0.0.4
+Author URI: http://endegelaen.de/
 */
 
 class YAWPP
@@ -38,6 +39,8 @@ class YAWPP
         add_action('save_post', array($this, 'savePostdata'), 10, 2);
 
 
+        //add_filter('attachment_fields_to_edit', array($this, 'audioBtn'), 10, 2);
+        //add_filter('flash_uploader', array($this, 'returnFalse'), 5);
         add_filter('the_title', array($this, 'postTitle'), 10, 2);
         
         
@@ -505,7 +508,9 @@ class YAWPP
     {
         global $post; // ugly... but required.
 
-        $str = $this->autoPlayer($str, $post);
+        if(!is_feed()) {
+                $str = $this->autoPlayer($str, $post);
+        }
         
         return $str;
     }
@@ -557,4 +562,4 @@ class YAWPP
 }
 
 $yawpp = new YAWPP();
-
+?>
